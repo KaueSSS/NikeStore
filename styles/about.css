@@ -1,0 +1,103 @@
+/*-------------------------Css da página sobre-------------------------*/
+
+/*-------------------------responsividade dos cards-------------------------*/
+main{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 10px;
+}
+/*-------------------------responsividade dos cards-------------------------*/
+
+/*-------------------------corpo dos cards-------------------------*/
+
+/*------geral------*/
+.card {
+    width: 300px;
+    height: 450px;
+    background-color: #202020;
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    margin: 20px 0px;
+}
+/*------geral------*/
+
+/*------card-image------*/
+.imagem{
+    text-align: center;
+}
+.image1{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-top: 20px;
+}
+/*------card-image------*/
+
+/*------card-text------*/
+.text-main {
+    text-align: center;
+    color: #fff;
+    font-weight: 600;
+    font-size: 25px;
+}
+.desc {
+    color: rgb(216, 216, 216);
+    font-weight: 300;
+    text-align: center;
+    font-size: 15px;
+    margin: 5px;
+}
+
+.sub{
+    font-size: 20px;
+    font-weight: bolder;
+}
+/*------card-text------*/
+
+/*------card-button------*/
+.btn {
+    padding: 10px 30px;
+    font-size: 15px;
+    font-weight: 500;
+    border-radius: 10px;
+    border: none;
+    transition: ease-in-out 0.5s;
+    background-color: aliceblue;
+    color: black;
+    cursor: pointer;
+    box-shadow: inset 0 0 0 0 rgb(55, 44, 83);
+}
+.btn:hover{ 
+    transition: 0.5s;
+    color: #fff;
+    box-shadow: inset 120px 0 0 0 rgb(55, 44, 83);
+}
+
+
+.button {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+/*------card-button------*/
+
+/*-------------------------corpo dos cards-------------------------*/
+
+/*-------------------------animação-------------------------*/
+@keyframes transitionAbout{
+    from{
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.card, .top, footer{
+    animation: transitionAbout 1s;
+}
+/*-------------------------animação-------------------------*/

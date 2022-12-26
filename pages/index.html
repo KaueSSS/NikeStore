@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Nike Store</title>
+        <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/index.css">
+        <link rel="icon" href="../img/icon.png">
+    </head>
+<body>
+    <header>
+        <div class="top">
+            <!-- logo da nike--------------------------------------------->
+            <div class="logo">
+                <img src="../img/logo_transparente.png" alt="logo da nike">
+            </div>
+            <!-- logo da nike---------------------------------------------->
+            
+            <!-- titulo do site-------------------------------------------->
+            <div class="titulo">
+                <h1>Nike Store</h1>
+            </div>
+            <!-- titulo do site------------------------------------------->
+        </div>
+        <!-- barra de navegação------------------------------------------->
+        <nav>
+            <a href="index.html"  class="active">Home</a>
+            <a href="photos.html">Produtos</a>
+            <a href="about.html">Sobre</a>
+            <a href="form.html">Contato</a>
+        </nav>
+        <!-- barra de navegação------------------------------------------->
+    </header>
+    <main>
+        <!-- texto sobre a empresa------------------------------------------->
+        <div class="left">
+            <p>
+                Nike, Inc. é uma empresa estadunidense de calçados, roupas, e acessórios fundada em 1972 por Bill Bowerman e Phillip Knight. A sua sede fica em Beaverton, no estado de Oregon, nos Estados Unidos. É a marca de roupas mais valiosa do mundo, segundo o ranking BrandZ da consultoria Millward Brown, avaliada em 37.472 bilhões de dólares.
+            </p>
+        </div>
+        <!-- texto sobre a empresa------------------------------------------->
+        <!-- carousel-------------------------------------------------------->
+        <div class="right">
+            <div class="slider">
+                <div class="slides">
+            
+                    <!--radio buttons-->
+                    <input type="radio" id="radio1" name="radio-btn">
+                    <input type="radio" id="radio2" name="radio-btn">
+                    <input type="radio" id="radio3" name="radio-btn">
+                    <!--radio buttons-->
+        
+                    <!--imagens-->
+                    <div class="slide first">
+                        <img src="../img/moletom_F.webp" alt="imagem de moletom">
+                    </div>
+                    <div class="slide">
+                       <img src="../img/moletom_M.jpg" alt="imagem de moletom">
+                    </div>
+                    <div class="slide">
+                       <img src="../img/calca_M.webp" alt="imagem de moletom">
+                    </div>
+                    <!--imagens-->
+        
+                    <!--navegação-->
+                    <div class="navigation-auto">
+                        <div class="auto-btn1"></div>
+                        <div class="auto-btn2"></div>
+                        <div class="auto-btn3"></div>
+                    </div>
+                    <!--navegação-->
+                </div>
+                <div class="manual-navigation">
+                    <label for="radio1" class="manual-btn"></label>
+                    <label for="radio2" class="manual-btn"></label>
+                    <label for="radio3" class="manual-btn"></label>
+                </div>
+            </div>
+        </div>
+        <!-- carousel-------------------------------------------------------->
+    </main>
+    <!-- footer-------------------------------------------------------->
+    <footer>
+        <p>© Projeto_final | Design by: ZéTech | Feito com html e css</p>
+    </footer>
+    <!-- footer-------------------------------------------------------->
+    	
+    <!-- movimentação do carousel-------------------------------------------------------->
+    <script>
+        let count = 1
+        document.getElementById('radio1').checked = true;
+
+        setInterval(function(){
+            nextImage();
+        }, 5000)
+
+        function nextImage(){
+            count++;
+            if(count>3){
+                count = 1;
+            }
+
+            document.getElementById('radio'+count).checked = true;
+        }
+    </script>
+    <!-- movimentação do carousel-------------------------------------------------------->
+</body>
+</html>

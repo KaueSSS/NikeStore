@@ -1,0 +1,169 @@
+/*------------------------Css da página principal--------------------------*/
+
+main{
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+/*------------------------divisão do corpo--------------------------*/
+.right{
+    flex: 50%;
+}
+.left{
+    flex: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/*------------------------divisão do corpo--------------------------*/
+
+/*------------------------texto--------------------------*/
+.left p{
+    font-size: 25px;
+    width: 70%;
+}
+/*------------------------texto--------------------------*/
+
+/*------------------------carousel--------------------------*/
+
+/*------geral------*/
+.slider{
+    margin: 0 auto;
+    width: 400px;
+    height: 400px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.7);
+}
+/*------geral------*/
+
+/*------slides------*/
+.slides{
+    width: 400%;
+    height: 400px;
+    display: flex;
+}
+
+.slides input{
+    display: none;
+}
+
+.slide{
+    width: 25%;
+    position: relative;
+    transition: 2s;
+}
+
+.slide img{
+    width: 400px;
+}
+/*------slides------*/
+
+/*------slides buttons------*/
+.manual-navigation{
+    position: absolute;
+    width: 400px;
+    margin-top: -40px;
+    display: flex;
+    justify-content: center;
+}
+
+.manual-btn{
+    border: 2px solid aliceblue;
+    box-shadow: black 3px 3px 5px;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.manual-btn:not(:last-child){
+    margin-right: 40px
+}
+
+.manual-btn:hover{
+    background-color: aliceblue;
+}
+/*------slides buttons------*/
+
+/*------slides transition------*/
+#radio1:checked ~ .first{
+    margin-left: 0;
+}
+#radio2:checked ~ .first{
+    margin-left: -25%;
+}
+#radio3:checked ~ .first{
+    margin-left: -50%;
+}
+/*------slides transition------*/
+
+/*------auto-navigation buttons------*/
+.navigation-auto div{
+    border: 2px solid #20a6ff;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.navigation-auto{
+    position: absolute;
+    width: 400px;
+    margin-top: 360px;
+    display: flex;
+    justify-content: center;
+}
+/*------auto-navigation buttons------*/
+
+/*------auto-navigation------*/
+.navigation-auto div:not(:last-child){
+    margin-right: 40px;
+}
+
+#radio1:checked ~ .navigation-auto .auto-btn1{
+    background-color: aliceblue;
+}
+#radio2:checked ~ .navigation-auto .auto-btn2{
+    background-color: aliceblue;
+}
+#radio3:checked ~ .navigation-auto .auto-btn3{
+    background-color: aliceblue;
+}
+/*------auto-navigation------*/
+
+/*------------------------carousel--------------------------------*/
+
+/*------------------------responsividade--------------------------*/
+
+
+@media (max-width: 1211px){
+    main{
+        flex: 50%;
+        display: flex;
+        flex-direction: column;
+    }
+    .left{
+        margin-bottom: 5vh;
+    }
+}
+
+/*------------------------responsividade--------------------------*/
+
+/*-------------------------animação-------------------------*/
+@keyframes transitionIndex{
+    from{
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.left, .right, .top, footer{
+    animation: transitionIndex 1s;
+}
+/*-------------------------animação-------------------------*/

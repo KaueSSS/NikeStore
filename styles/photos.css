@@ -1,0 +1,99 @@
+/*------------------------Css da página de produtos--------------------------*/
+
+/*-------------------------responsividade dos cards-------------------------*/
+main{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    border-radius: 10px;
+}
+/*-------------------------responsividade dos cards-------------------------*/
+
+/*------------------------corpo dos cards--------------------------*/
+
+/*------geral------*/
+.card {
+    width: 300px;
+    height: 400px;
+    margin: 25px;
+    background-color: #fff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.7);
+}
+/*------geral------*/
+
+/*------topo do card------*/
+.card-header {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+
+.card-img {
+    min-width: 100%;
+    width: auto;
+    height: 100%;
+}
+/*------topo do card------*/
+
+/*------centro do card------*/
+.card-body {
+    height: 135px;
+    padding: 15px;
+    text-align: center;
+    font-family: sans-serif;
+}
+
+.card-local {
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+.card-titulo {
+    font-size: 32px;
+    margin: 15px 0;
+}
+/*------centro do card------*/
+
+/*------botão do card------*/
+.card-footer {
+    margin-top: 10px;
+    text-align: center;
+    background-color: #000;
+    box-shadow: inset 0 0 0 0 rgb(55, 44, 83);
+}
+.card-footer a {
+    color: #fff;
+    display: block;
+    padding: 16px;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-weight: 600;
+    transition: 0.4s;
+}
+
+.card-footer a:hover{
+    color: aliceblue;
+    box-shadow: inset 300px 0 0 0 rgb(54, 34, 110);
+}
+/*------centro do card------*/
+
+/*------------------------corpo dos cards--------------------------*/
+
+/*-------------------------animação-------------------------*/
+@keyframes transitionPhotos{
+    from{
+        opacity: 0;
+        transform: translateX(20px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.card, .top, footer{
+    animation: transitionPhotos 1s;
+}
+/*-------------------------animação-------------------------*/
